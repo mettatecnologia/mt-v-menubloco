@@ -1,0 +1,23 @@
+{
+  "name": "jb-v-menubloco",
+  "version": "1.0.3",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jbmchd/jb-v-menubloco.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jbmchd/jb-v-menubloco/issues"
+  },
+  "homepage": "https://github.com/jbmchd/jb-v-menubloco#readme",
+  "dependencies": {
+    "jb-v-bloco": "1.0.0"
+  }
+}
