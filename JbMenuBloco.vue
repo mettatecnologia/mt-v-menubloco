@@ -16,9 +16,9 @@ $array = [
 
                 <template v-for="(bloco, i) in blocos">
 
-                    <v-flex v-if="tipo=='operacoes' && i==0" xs12 :key="i" >
+                    <v-flex xs12 :key="i" >
                         <v-divider></v-divider>
-                        <v-layout justify-end  > <span class="title font-italic grey--text">Operações</span>  </v-layout>
+                        <v-layout justify-end  > <span class="title font-italic grey--text">{{tipo}}</span>  </v-layout>
                     </v-flex>
 
                     <v-flex xs3 :key="i">
@@ -29,11 +29,6 @@ $array = [
                     </v-flex>
 
                 </template>
-             
-             <v-flex v-if="tipo=='operacoes'" xs12 class="mt-5">
-                <v-divider></v-divider>
-                <v-layout justify-end  > <span class="title font-italic grey--text">Sistema</span>  </v-layout>
-            </v-flex>
 
          </v-layout>
      </v-flex>

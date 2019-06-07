@@ -1,6 +1,6 @@
 {
   "name": "jb-v-menubloco",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -18,6 +18,6 @@
   },
   "homepage": "https://github.com/jbmchd/jb-v-menubloco#readme",
   "dependencies": {
-    "jb-v-bloco": "1.0.0"
+    "jb-v-icon": "1.0.0"
   }
 }
