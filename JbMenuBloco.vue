@@ -2,7 +2,7 @@
 $array = [
     'operacoes'=>[
         ['action'=>'pessoas','color'=>'orange darken-4','icone'=>'fas fa-users','qtd'=>$pessoas_qtd,'titulo'=>'Pessoas','action-text'=>null,'action-icon'=>null]
-    ], 
+    ],
     'config'=>[
         ['action'=>'pessoas','color'=>'orange darken-4','icone'=>'fas fa-users','qtd'=>$pessoas_qtd,'titulo'=>'Pessoas','action-text'=>null,'action-icon'=>null]
     ]
@@ -14,12 +14,12 @@ $array = [
      <v-flex xs12 v-for="(blocos, tipo) in array_itens" :key="tipo">
          <v-layout align-start row wrap>
 
-                <template v-for="(bloco, i) in blocos">
+                <v-flex v-if="tipo && blocos.length" xs12 :key="i" >
+                    <v-divider></v-divider>
+                    <v-layout justify-end  > <span class="title font-italic grey--text">{{tipo}}</span>  </v-layout>
+                </v-flex>
 
-                    <v-flex xs12 :key="i" >
-                        <v-divider></v-divider>
-                        <v-layout justify-end  > <span class="title font-italic grey--text">{{tipo}}</span>  </v-layout>
-                    </v-flex>
+                <template v-for="(bloco, i) in blocos">
 
                     <v-flex xs3 :key="i">
                         <jb-bloco :action="bloco.action" :action-text="bloco['action-text']" :action-icon="bloco['action-icon']" :color="bloco.color" :icone="bloco.icone">

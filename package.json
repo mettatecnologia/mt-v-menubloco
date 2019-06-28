@@ -1,6 +1,6 @@
 {
-  "name": "jb-v-menubloco",
-  "version": "1.0.5",
+  "name": "@metta/mt-v-menubloco",
+  "version": "1.0.3",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -8,16 +8,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jbmchd/jb-v-menubloco.git"
+    "url": "git+https://github.com/mettatecnologia/mt-v-menubloco.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/jbmchd/jb-v-menubloco/issues"
+    "url": "https://github.com/mettatecnologia/mt-v-menubloco/issues"
   },
-  "homepage": "https://github.com/jbmchd/jb-v-menubloco#readme",
+  "homepage": "https://github.com/mettatecnologia/mt-v-menubloco#readme",
   "dependencies": {
-    "jb-v-icon": "^1.0.0"
+    "@metta/mt-v-icon": "^1.0.1"
   }
 }
