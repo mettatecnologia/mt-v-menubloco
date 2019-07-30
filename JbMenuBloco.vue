@@ -21,12 +21,12 @@ $array = [
 
                 <template v-for="(bloco, i) in blocos">
 
-                    <v-flex xs3 :key="i">
+                    <div :key="i" >
                         <jb-bloco :action="bloco.action" :action-text="bloco['action-text']" :action-icon="bloco['action-icon']" :color="bloco.color" :icone="bloco.icone">
                             <div :class="bloco.qtd !== null ? 'display-1 font-weight-bold':'display-1 font-weight-bold mt-4 pt-3' ">{{bloco.qtd}}</div>
                             <div class="subheading">{{bloco.titulo}}</div>
                         </jb-bloco>
-                    </v-flex>
+                    </div>
 
                 </template>
 
