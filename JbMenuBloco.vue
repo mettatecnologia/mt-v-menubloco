@@ -10,7 +10,7 @@ $array = [
 */
 <template>
 <v-row align="start">
-     <v-col v-for="(blocos, tipo) in array_itens" :key="tipo">
+     <v-col cols="12" v-for="(blocos, tipo) in array_itens" :key="tipo">
 
         <v-row v-if="tipo" :key="i" >
             <v-col>
