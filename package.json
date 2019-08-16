@@ -1,6 +1,6 @@
 {
   "name": "@metta/mt-v-menubloco",
-  "version": "1.0.4",
+  "version": "2.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -16,8 +16,5 @@
   "bugs": {
     "url": "https://github.com/mettatecnologia/mt-v-menubloco/issues"
   },
-  "homepage": "https://github.com/mettatecnologia/mt-v-menubloco#readme",
-  "dependencies": {
-    "@metta/mt-v-icon": "^1.0.1"
-  }
+  "homepage": "https://github.com/mettatecnologia/mt-v-menubloco#readme"
 }

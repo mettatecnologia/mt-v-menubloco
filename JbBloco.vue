@@ -2,15 +2,13 @@
 <div>
 
     <v-hover>
-        <v-card tile :color="color" dark  :width="width || '300'" :min-height="height || '140'" class="caixa-notificacao ma-1" slot-scope="{ hover }" >
-            <v-card-text class="headline font-weight-bold pa-0"  >
-                <v-layout align-center justify-space-between row fill-height class="pt-3">
+        <v-card tile :color="color" dark :min-height="height || '140'" class="caixa-notificacao ma-1" slot-scope="{ hover }" >
+            <v-card-text class="headline pa-0"  >
+                <v-row align="center" justify="space-between" class="px-3 pt-3">
 
 
                     <div class="text-sm-left">
-                        <div class=" pl-3">
-                            <slot></slot>
-                        </div>
+                        <div class="white--text pl-3"> <slot></slot> </div>
                     </div>
 
                     <div v-if="icone" class="pr-2">
@@ -24,10 +22,11 @@
                     </v-expand-transition>
 
 
-                </v-layout>
+                </v-row>
             </v-card-text>
+
             <v-card-actions class="pa-0 fixar">
-                <v-btn depressed small block :href="action" @click=" v => (action?null:dialog.mostrarDialog = true) " class="pa-0" ><jb-icon class="mr-1">{{actionIcon || 'arrow_forward'}}</jb-icon> {{actionText || 'Entrar'}} </v-btn>
+                <v-btn depressed small block :href="action" @click=" v => (action?null:dialog.mostrarDialog = true) " class="pa-0 caption" ><v-icon class="mr-1 body-1">{{actionIcon || 'arrow_forward'}}</v-icon> {{actionText || 'Entrar'}} </v-btn>
             </v-card-actions>
         </v-card>
 
@@ -56,7 +55,7 @@
 <script>
     export default {
       props:{
-          width:String,height:String, color:{type:String, required:true},
+          height:String, color:{type:String, required:true},
           icone:String,
           action:String, actionText:String, actionIcon:String,
           hoverText:String, hoverColor:String,

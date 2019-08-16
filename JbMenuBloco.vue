@@ -9,31 +9,28 @@ $array = [
 ];
 */
 <template>
-<v-layout align-start row wrap>
+<v-row align="start">
+     <v-col v-for="(blocos, tipo) in array_itens" :key="tipo">
 
-     <v-flex xs12 v-for="(blocos, tipo) in array_itens" :key="tipo">
-         <v-layout align-start row wrap>
+        <v-row v-if="tipo" :key="i" >
+            <v-col>
+                <v-divider></v-divider>
+                <v-row justify="end"><span class="title font-italic grey--text mr-3">{{tipo}}</span></v-row>
+            </v-col>
+        </v-row>
 
-                <v-flex v-if="tipo && blocos.length" xs12 :key="i" >
-                    <v-divider></v-divider>
-                    <v-layout justify-end  > <span class="title font-italic grey--text">{{tipo}}</span>  </v-layout>
-                </v-flex>
+        <v-row>
+            <v-col v-for="(bloco, i) in blocos" :key="i" cols="3">
+                <jb-bloco :action="bloco.action" :action-text="bloco['action-text']" :action-icon="bloco['action-icon']" :color="bloco.color" :icone="bloco.icone">
+                    <div :class="bloco.qtd !== null ? 'display-1 font-weight-bold':'display-1 font-weight-bold mt-4 pt-3' ">{{bloco.qtd}}</div>
+                    <div class="subtitle-1">{{bloco.titulo}}</div>
+                </jb-bloco>
+            </v-col>
 
-                <template v-for="(bloco, i) in blocos">
+        </v-row>
 
-                    <div :key="i" >
-                        <jb-bloco :action="bloco.action" :action-text="bloco['action-text']" :action-icon="bloco['action-icon']" :color="bloco.color" :icone="bloco.icone">
-                            <div :class="bloco.qtd !== null ? 'display-1 font-weight-bold':'display-1 font-weight-bold mt-4 pt-3' ">{{bloco.qtd}}</div>
-                            <div class="subheading">{{bloco.titulo}}</div>
-                        </jb-bloco>
-                    </div>
-
-                </template>
-
-         </v-layout>
-     </v-flex>
-
-</v-layout>
+     </v-col>
+</v-row>
 </template>
 
 <script>
