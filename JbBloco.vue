@@ -32,7 +32,7 @@
 
     </v-hover>
 
-    <v-dialog :fullscreen="dialogFullscreen" :persistent="dialogPersistent" v-model="dialog.mostrarDialog" :max-width="dialogMaxWidth || '750px'">
+    <v-dialog :fullscreen="dialogFullscreen" :persistent="dialogPersistent" v-model="dialog.mostrarDialog" :max-width="dialogMaxWidth">
         <v-card>
             <v-card-title>
                 <span class="headline">{{ dialogTitulo }}</span>
@@ -92,6 +92,10 @@
 </script>
 
 <style media="screen">
+
+.v-dialog {
+    width: auto !important;
+}
 
 .caixa-notificacao.v-card .icon {
     -webkit-transition: all .3s linear;
