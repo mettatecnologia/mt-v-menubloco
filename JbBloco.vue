@@ -2,7 +2,7 @@
 <div>
 
     <v-hover>
-        <v-card tile :color="color" dark :min-height="height || '140'" class="caixa-notificacao ma-1" slot-scope="{ hover }" >
+        <v-card tile :color="color" dark :min-height="height || '140'" class="jb-bloco ma-1" slot-scope="{ hover }" >
             <v-card-text class="headline pa-0"  >
                 <v-row align="center" justify="space-between" class="px-3 pt-3">
 
@@ -32,7 +32,7 @@
 
     </v-hover>
 
-    <v-dialog :fullscreen="dialogFullscreen" :persistent="dialogPersistent" v-model="dialog.mostrarDialog" :max-width="dialogMaxWidth">
+    <v-dialog v-model="dialog.mostrarDialog" :fullscreen="dialogFullscreen" :persistent="dialogPersistent" :max-width="dialogMaxWidth || 'max-content'">
         <v-card>
             <v-card-title>
                 <span class="headline">{{ dialogTitulo }}</span>
@@ -93,11 +93,11 @@
 
 <style media="screen">
 
-.v-dialog {
+/* .v-dialog {
     width: auto !important;
-}
+} */
 
-.caixa-notificacao.v-card .icon {
+.jb-bloco.v-card .icon {
     -webkit-transition: all .3s linear;
     -o-transition: all .3s linear;
     transition: all .3s linear;
@@ -105,22 +105,22 @@
     opacity: 0.25;
   }
 
-.caixa-notificacao.v-card .icon.icon-mdi { font-size: 70px; }
-.caixa-notificacao.v-card:hover .icon.icon-mdi { font-size: 75px; }
+.jb-bloco.v-card .icon.icon-mdi { font-size: 70px; }
+.jb-bloco.v-card:hover .icon.icon-mdi { font-size: 75px; }
 
-.caixa-notificacao.v-card .icon.icon-fa { font-size: 75px; }
-.caixa-notificacao.v-card:hover .icon.icon-fa { font-size: 80px; }
+.jb-bloco.v-card .icon.icon-fa { font-size: 75px; }
+.jb-bloco.v-card:hover .icon.icon-fa { font-size: 80px; }
 
-.caixa-notificacao .v-card__actions.fixar {
+.jb-bloco .v-card__actions.fixar {
     position: absolute;
     bottom: 0;
     width: 100%;
 }
 
-.caixa-notificacao .v-card__actions.fixar button,
-.caixa-notificacao .v-card__actions.fixar a { background-color: rgba(0, 0, 0, 0.25) !important }
+.jb-bloco .v-card__actions.fixar button,
+.jb-bloco .v-card__actions.fixar a { background-color: rgba(0, 0, 0, 0.25) !important }
 
-.caixa-notificacao .v-card--reveal {
+.jb-bloco .v-card--reveal {
     align-items: center;
     top: 0;
     position: absolute;
